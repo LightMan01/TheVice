@@ -1,0 +1,5 @@
+description 'Enables use of /ooc for out of character chat.'
+server_script 'ooc.lua'
+server_script '911.lua'
+server_script 'me.lua'
+server_script 'dispatch.lua'
