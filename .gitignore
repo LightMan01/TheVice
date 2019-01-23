@@ -2,3 +2,4 @@ fx-server-data/cache/
 #fx-server-data/server.cfg
 **/server/
 fx-server-data/resources/\[models\]/
+**/fx-server/
