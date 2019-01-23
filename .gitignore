@@ -1,4 +1,4 @@
 fx-server-data/cache/
 fx-server-data/server.cfg
-server/
+**/server/
 fx-server-data/resources/\[models\]/
