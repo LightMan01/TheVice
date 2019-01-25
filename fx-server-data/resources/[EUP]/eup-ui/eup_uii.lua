@@ -3654,14 +3654,30 @@ menuPool:Add(mainMenu)
 
 menuPool:RefreshIndex()
 
-RegisterCommand('eup', function()
-    mainMenu:Visible(not mainMenu:Visible())
-end, false)
 
 CreateThread(function()
     while true do
         Wait(0)
-
+	if GetDistanceBetweenCoords(-448.3515625,6007.92578125,31.716394424438,GetEntityCoords(PlayerPedId())) < 1.5 then
+		if IsControlJustPressed(1,23) then
+			mainMenu:Visible(not mainMenu:Visible())
+		else drawTxt("Нажмите ~b~F~w~ что бы открыть ~b~EUP-меню",4,1,0.5,0.8,1.0,255,255,255,255)
+		end
+	end
         menuPool:ProcessMenus()
     end
 end)
+function drawTxt(text,font,centre,x,y,scale,r,g,b,a)
+	SetTextFont(font)
+	SetTextProportional(0)
+	SetTextScale(scale, scale)
+	SetTextColour(r, g, b, a)
+	SetTextDropShadow(0, 0, 0, 0,255)
+	SetTextEdge(1, 0, 0, 0, 255)
+	SetTextDropShadow()
+	SetTextOutline()
+	SetTextCentre(centre)
+	SetTextEntry("STRING")
+	AddTextComponentString(text)
+	DrawText(x , y)	
+end
