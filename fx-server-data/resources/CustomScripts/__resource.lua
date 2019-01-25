@@ -18,7 +18,7 @@ client_scripts{
   "stopwanted-client.lua",
   "deletepoliceweapons-client.lua",
  --"deathmessages-client.lua",
- "gameui-client.lua",
+-- "gameui-client.lua",
   --"names-client.lua",
   -- "deletevehicle-client.lua",
  -- "weathersync-client.lua",
