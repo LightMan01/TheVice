@@ -1,9 +1,9 @@
 SPAWNNAME:DISPLAYNAME:CLASS
-metro1:BCSO Charger 13:18
-leosilv:BCSO Silverado Supervisor:18
-chargerleo:Unmarked Charger 13:18
-so3:BCSO CVPI:18
-so4:Unmarked Taurus:18
+metro1:BCSO Charger 13:23
+leosilv:BCSO Silverado Supervisor:23
+chargerleo:Unmarked Charger 13:23
+so3:BCSO CVPI:23
+so4:Unmarked Taurus:23
 sheriff:Paleto PD CVPI (роторные огни):18
 tahoe2:Chevy Tahoe 15:18
 charger:Dodge Charger 15:18
