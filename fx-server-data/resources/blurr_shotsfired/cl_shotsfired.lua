@@ -1,4 +1,4 @@
-local notificationText = "Dispatch: 10-10 Shots Fired, marked all units GPS."
+local notificationText = "Диспетчер: Замечена стрельба, место будет отмечено на ваших GPS."
 
 local blacklistedWeapons = {
 	"WEAPON_UNARMED",
