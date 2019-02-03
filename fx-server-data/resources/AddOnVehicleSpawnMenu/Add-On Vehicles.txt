@@ -1,3 +1,4 @@
+SPAWNNAME:DISPLAYNAME:CLASS
 metro1:BCSO Charger 13:18
 leosilv:BCSO Silverado Supervisor:18
 chargerleo:Unmarked Charger 13:18
