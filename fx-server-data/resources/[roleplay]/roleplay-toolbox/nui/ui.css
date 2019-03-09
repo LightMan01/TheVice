@@ -1,0 +1,25 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto' );
+
+#actionmenu {
+    position: absolute;
+    left: 28%; 
+    top: 40%;
+}
+
+#actionmenu button {
+    background-color: #FFFFFF; 
+    border-radius: 12px;
+    color: black; 
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 24px; 
+    margin: 8px 0px 8px 0px;
+    cursor: pointer; 
+    width: 190px; 
+    display: block; 
+    text-transform: uppercase;
+}
+
+#actionmenu button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+}

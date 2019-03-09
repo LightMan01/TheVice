@@ -1,0 +1,198 @@
+<!-- 
+
+	ActionMenu 
+	Created by WolfKnight
+	Additional help from lowheartrate, TheStonedTurtle, and Briglair. 
+
+ -->
+
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="ui.js" type="text/javascript"></script>
+        <link href="ui.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+        <div id="actionmenu" style="display: none;">
+            <!--
+        This mainmenu div should be left as it is, you should change the buttons though.
+
+        If you want to make a submenu, then you must create a new div, with the ID of the
+        div being the data-sub attribute of the button that will open it. For example, the
+        below button Example Submenu, has the data-sub attribute of "examplesubmenu", which
+        is the same id as the div below. All submenus must also have a data-parent attribute.
+     -->
+            <div id="mainmenu">
+                <button class="menuoption" data-sub="examplesubmenu2">Полицейские</button>
+				<button class="menuoption" data-sub="examplesubmenu10">EMS</button>
+				<button class="menuoption" data-sub="examplesubmenu">Гражданские</button>
+				<button class="menuoption" data-sub="examplesubmenu4">Транспорт</button>
+            </div>
+            <div id="examplesubmenu" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-action="hands">Руки вверх</button>
+                <button class="menuoption" data-action="kneel">Сдаться</button>
+                <button class="menuoption" data-action="dropweap">Бросить оружие</button>
+                <button class="menuoption" data-sub="examplesubmenu5">Рекламы</button>
+				<button class="menuoption" data-sub="examplesubmenu15">Анимации</button>
+            </div>
+			
+			<div id="examplesubmenu2" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-sub="examplesubmenu3">Действия</button>
+				<button class="menuoption" data-sub="examplesubmenu13">Скины</button>
+				<button class="menuoption" data-sub="examplesubmenu8">Анимации</button>
+				<button class="menuoption" data-sub="radar">Радар</button>
+            </div>
+
+            <div id="examplesubmenu3" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-action="cuff">Одеть наручники</button>
+                <button class="menuoption" data-action="drag">Тащить игрока</button>
+                <button class="menuoption" data-action="seat">Усадить в транспорт</button>
+                <button class="menuoption" data-action="unseat">Достать из транспрта</button>
+            </div>
+
+            <div id="examplesubmenu4" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-action="engine">Двигатель</button>
+                <button class="menuoption" data-sub="examplesubmenu6">Окна</button>
+                <button class="menuoption" data-sub="examplesubmenu7">Двери</button>
+				<button class="menuoption" data-action="delete">Удалить транспорт</button>
+            </div>
+
+            <div id="examplesubmenu5" data-parent="mainmenu" style="display: none;">
+				<button class="menuoption" data-action="ad1">24/7</button>
+				<button class="menuoption" data-action="ad2">Аммунация</button>
+                <button class="menuoption" data-action="ad3">Новости</button>
+                <button class="menuoption" data-action="ad4">Vanilla Unicorn</button>
+				<button class="menuoption" data-action="ad5">Downtown Cab Co.</button>
+				<button class="menuoption" data-sub="examplesubmenu19">След. страница</button>
+            </div>
+			
+			<div id="examplesubmenu19" data-parent="mainmenu" style="display: none;">
+				<button class="menuoption" data-action="ad6">LS Traffic</button>
+				<button class="menuoption" data-action="ad7">LS Customs</button>
+                <button class="menuoption" data-action="ad8">Ace Liquor</button>
+                <button class="menuoption" data-action="ad9">Limited Gasoline</button>
+				<button class="menuoption" data-action="ad10">Go Postal</button>
+				<button class="menuoption" data-sub="examplesubmenu20">След. страница</button>
+				<button class="menuoption" data-sub="examplesubmenu5">Пред. страница</button>
+            </div>
+			
+			<div id="examplesubmenu20" data-parent="mainmenu" style="display: none;">
+				<button class="menuoption" data-action="ad11">Hayes Auto</button>
+				<button class="menuoption" data-action="ad12">Vangelico's</button>
+                <button class="menuoption" data-action="ad13">Cluckin Bell</button>
+                <button class="menuoption" data-action="ad14">Bugstars</button>
+				<button class="menuoption" data-action="ad15">Fleeca Bank</button>
+				<button class="menuoption" data-sub="examplesubmenu21">След. страница</button>
+				<button class="menuoption" data-sub="examplesubmenu19">Пред. страница</button>
+            </div>
+			
+			<div id="examplesubmenu21" data-parent="mainmenu" style="display: none;">
+				<button class="menuoption" data-action="ad16">Echo Sechs</button>
+				<button class="menuoption" data-action="ad17">Mors Mutual</button>
+                <button class="menuoption" data-action="ad18">PostOP</button>
+                <button class="menuoption" data-action="ad19">Auto Exotic</button>
+				<button class="menuoption" data-action="ad20">LS Water & Power</button>
+				<button class="menuoption" data-action="ad21">Dynasty 8</button>
+				<button class="menuoption" data-sub="examplesubmenu20">Пред. страница</button>
+            </div>
+
+            <div id="examplesubmenu6" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-action="fwindows">Передние окна</button>
+                <button class="menuoption" data-action="rwindows">Задние окна</button>
+            </div>
+
+            <div id="examplesubmenu7" data-parent="mainmenu" style="display: none;">
+                <button class="menuoption" data-action="trunk">Багажник</button>
+                <button class="menuoption" data-action="hood">Капорт</button>
+                <button class="menuoption" data-action="fleft">Передняя левая</button>
+                <button class="menuoption" data-action="fright">Передняя правая</button>
+                <button class="menuoption" data-action="rleft">Задняя левая</button>
+                <button class="menuoption" data-action="rright">Задняя правая</button>
+            </div>
+			
+            <div id="examplesubmenu8" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="radio">Рация</button>
+                <button class="menuoption" data-action="radiogun">Рация+прицел</button>
+				<button class="menuoption" data-action="stance">Руки на поясе</button>
+				<button class="menuoption" data-action="investigate">Скрестить руки</button>
+				<button class="menuoption" data-action="holster">Холстер</button>
+				<button class="menuoption" data-sub="examplesubmenu18">След. страница</button>
+				<button class="menuoption" data-action="cancel">Отменить анимацию</button>
+            </div>
+			
+			 <div id="examplesubmenu18" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="citation">Выписать штраф</button>
+				<button class="menuoption" data-action="notes">Заметки</button>
+				<button class="menuoption" data-action="traffic">Руководить траффиком</button>
+				<button class="menuoption" data-sub="examplesubmenu8">Пред. страница</button>
+				<button class="menuoption" data-action="cancel">Отменить анимацию</button>
+            </div>
+			
+			<div id="examplesubmenu10" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-sub="examplesubmenu11">Действия</button>
+				<button class="menuoption" data-sub="examplesubmenu14">Скины</button>
+				<button class="menuoption" data-sub="examplesubmenu12">Анимации</button>
+            </div>
+			
+			<div id="examplesubmenu11" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="drag">Carry On Stretcher</button>
+				<button class="menuoption" data-action="seat">Seat Player In Ambulance</button>
+				<button class="menuoption" data-action="unseat">Save Player From Vehicle</button>
+				<button class="menuoption" data-action="cancel">Cancel Emote</button>
+            </div>
+			
+			<div id="examplesubmenu12" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="medic">Tend To Patient</button>
+				<button class="menuoption" data-action="notes">Take Notes</button>
+				<button class="menuoption" data-action="weld">Weld Vehicle</button>
+				<button class="menuoption" data-action="cancel">Cancel Emote</button>
+            </div>
+			
+			<div id="examplesubmenu13" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="lspd">LSPD</button>
+				<button class="menuoption" data-action="bcso">BCSO</button>
+				<button class="menuoption" data-action="sahp">SAHP</button>
+            </div>
+			
+			<div id="examplesubmenu14" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="fire">Firefighter Uniform</button>
+				<button class="menuoption" data-action="medicoutfit">Medic Uniform</button>
+            </div>
+			
+			<div id="examplesubmenu15" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="smoke">Курить</button>
+				<button class="menuoption" data-action="party">Танцевать</button>
+				<button class="menuoption" data-action="pushups">Отжаться</button>
+				<button class="menuoption" data-action="situps">Лечь</button>
+				<button class="menuoption" data-action="phone">Телефон</button>
+				<button class="menuoption" data-sub="examplesubmenu16">След. страница</button>
+				<button class="menuoption" data-action="cancel">Отменить анимацию</button>
+            </div>
+			
+			<div id="examplesubmenu16" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="injured">Поврежден</button>
+				<button class="menuoption" data-action="weed">Косяк</button>
+				<button class="menuoption" data-action="coffee">Кофе</button>
+			    <button class="menuoption" data-action="photo">Фото</button>
+				<button class="menuoption" data-action="binoculars">Бинокль</button>
+				<button class="menuoption" data-sub="examplesubmenu17">След. страница</button>
+				<button class="menuoption" data-sub="examplesubmenu15">Пред. страница</button>
+				<button class="menuoption" data-action="cancel">Отменить анимацию</button>
+            </div>
+			
+			<div id="examplesubmenu17" data-parent="mainmenu" style="display: none;">
+			    <button class="menuoption" data-action="drink">Пить</button>
+			    <button class="menuoption" data-action="film">Снимать</button>
+				<button class="menuoption" data-action="weights">Тренироваться</button>
+				<button class="menuoption" data-action="flex">Показать мышцы</button>
+				<button class="menuoption" data-sub="examplesubmenu16">Пред. страница</button>
+				<button class="menuoption" data-action="cancel">Отменить анимацию</button>
+            </div>
+
+            <!-- Do not remove this or you will not be able to exit the menu -->
+            <button onclick="ResetMenu()">Назад</button>
+            <button class="menuoption" data-action="exit">Выход</button>
+        </div>
+    </body>
+</html>
